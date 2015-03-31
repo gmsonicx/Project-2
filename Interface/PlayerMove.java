@@ -16,7 +16,9 @@ public class PlayerMove extends Object{
 	public Coordinate getEnd(){
 		return end;
 	}
-	
+	public int getPlayerId(){
+		return playerId;
+	}
 	public int getEndCol(){
 		return end.getCol();
 	}
@@ -32,7 +34,9 @@ public class PlayerMove extends Object{
 	public int getStartRow(){
 		return start.getRow();
 	}
-
+	public int hashCode(){
+		return end.hashCode();
+	}
 	public boolean isMove(){
 		return move;
 	}

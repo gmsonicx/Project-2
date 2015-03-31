@@ -15,7 +15,7 @@ public interface PlayerModule {
 	public Map<Integer,Coordinate> getPlayerLocations();
 	public List<Coordinate> getShortestPath(Coordinate start, Coordinate end);
 	public int getWallsRemaining(int playerID);
-	public void init(Logger logger, int playerId, int numWalls, Map<Integer,Coordinate> playerHomes);
+	public void init(Engine.Logger logger, int playerId, int numWalls, Map<Integer,Coordinate> playerHomes);
 	public void lastMove(PlayerMove m);
 	public PlayerMove move();
 	public void playerInvalidated(int playerId);

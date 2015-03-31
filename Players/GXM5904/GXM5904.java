@@ -13,7 +13,37 @@ public class GXM5904 implements PlayerModule {
 	public GXM5904() {
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	
+	
+	int playerId;
+	int numWalls;
+	Map<Integer, Coordinate> playerHomes;
+	
+	@Override
+	public void init(Engine.Logger logs, int playerId, int numWalls,
+			Map<Integer, Coordinate> playerHomes) {
+		// TODO Auto-generated method stub
+		if (playerId > 4){
+			this.playerId = 4;
+		}
+		else if (playerId < 1){
+			this.playerId = 1;
+		}
+		else{
+			this.playerId = playerId;
+		}
+		this.numWalls = numWalls;
+		this.playerHomes = playerHomes;
+		
+	}
+	@Override
+	public void lastMove(PlayerMove m) {
+		// TODO Auto-generated method stub
+		playerHomes.remove(m.getPlayerId(), m.getStart());
+		playerHomes.put(m.getPlayerId(), m.getEnd());
+		System.out.println("in lastMove... " + m.toString());
+	}
 	@Override
 	public Set<PlayerMove> allPossibleMoves() {
 		// TODO Auto-generated method stub
@@ -23,7 +53,7 @@ public class GXM5904 implements PlayerModule {
 	@Override
 	public int getID() {
 		// TODO Auto-generated method stub
-		return 0;
+		return playerId;
 	}
 
 	@Override
@@ -35,7 +65,8 @@ public class GXM5904 implements PlayerModule {
 	@Override
 	public Coordinate getPlayerLocation(int playerId) {
 		// TODO Auto-generated method stub
-		return null;
+		return playerHomes.get(playerId);
+		
 	}
 
 	@Override
@@ -53,26 +84,14 @@ public class GXM5904 implements PlayerModule {
 	@Override
 	public int getWallsRemaining(int playerID) {
 		// TODO Auto-generated method stub
-		return 0;
+		return numWalls;
 	}
 
-	@Override
-	public void init(Logger logger, int playerId, int numWalls,
-			Map<Integer, Coordinate> playerHomes) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void lastMove(PlayerMove m) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public PlayerMove move() {
 		// TODO Auto-generated method stub
-		return null;
+		if (PlayerMisMove())
 	}
 
 	@Override
@@ -80,5 +99,7 @@ public class GXM5904 implements PlayerModule {
 		// TODO Auto-generated method stub
 		
 	}
+
+
 
 }
