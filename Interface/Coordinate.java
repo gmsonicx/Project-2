@@ -15,10 +15,10 @@ public class Coordinate extends Object{
 		
 	}
 	
-	public boolean equals(Coordinate obj){
-		if (obj.getCol() == col && 
-				obj.getRow() == row){
-				return true;
+	@Override
+	public boolean equals(Object obj){
+		if (((Coordinate) obj).getCol() == col && ((Coordinate) obj).getRow() == row){
+			return true;
 			}
 		return false;
 	}

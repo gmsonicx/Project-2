@@ -5,7 +5,7 @@ public class PlayerMove extends Object{
 	public boolean move;
 	public Coordinate start;
 	public Coordinate end;
-	PlayerMove(int playerId, boolean move, Coordinate start, Coordinate end){
+	public PlayerMove(int playerId, boolean move, Coordinate start, Coordinate end){
 		this.playerId = playerId;
 		this.move = move;
 		this.start = start;
