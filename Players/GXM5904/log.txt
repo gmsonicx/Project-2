@@ -1,0 +1,23 @@
+commit 39256c9f862e63ab780b4e1c1f16a7bb40306109
+Author: Grantley Morrison <gxm5904@g.rit.edu>
+Date:   Tue Mar 31 23:31:38 2015 -0400
+
+    C
+
+commit ba9a0705795d934f2230c4c47ae9e6b1e8b6bc7a
+Author: Grantley Morrison <gxm5904@g.rit.edu>
+Date:   Tue Mar 31 19:27:43 2015 -0400
+
+    B
+
+commit 217f4e816a725c421606afec1f063ff3df897203
+Author: Grantley Morrison <gxm5904@g.rit.edu>
+Date:   Tue Mar 31 18:49:29 2015 -0400
+
+    A
+
+commit c2235475fad8d46177321d7e539b3bc86f2561e7
+Author: Grantley Morrison <gxm5904@g.rit.edu>
+Date:   Tue Mar 31 18:49:20 2015 -0400
+
+    :confetti_ball: Added .gitattributes & .gitignore files
